@@ -2,25 +2,29 @@ package com.ds.example;
 
 public class SinglyLinkedList2 {
 
-    private SinglyLinkedList2.ListNode head;
+    private ListNode head;
     private static class ListNode
     {
         private int data;
-        private SinglyLinkedList2.ListNode next;
+        private ListNode next;
         public ListNode(int data)
         {
             this.data=data;
             this.next=null;
         }
-
+        @Override
+        public String toString() {
+            return "data=" + data + ", next=" + next ;
+        }
     }
     // traverse the linkedlist
     public void display()
     {
-        SinglyLinkedList2.ListNode current=head;
+        ListNode current=head;
         while(current!=null)
         {
             System.out.print(current.data +"-->");
+            //System.out.println("cd:: "+current.data+" cn:: "+current.next);
             current=current.next;
         }
         System.out.println("null");
@@ -32,7 +36,7 @@ public class SinglyLinkedList2 {
             return 0;
         }
         int count=0;
-        SinglyLinkedList2.ListNode current=head;
+        ListNode current=head;
         while(current!=null)
         {
             count++;
