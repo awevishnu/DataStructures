@@ -11,6 +11,10 @@ public class SinglyLinkedList {
             this.data=data;
             this.next=null;
         }
+        @Override
+        public String toString() {
+            return "data=" + data + ", next=" + next ;
+        }
 
     }
 // traverse the linkedlist
